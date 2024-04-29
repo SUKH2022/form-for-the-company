@@ -1,0 +1,103 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+/* Hero section styles */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), #3551b5);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Heading styles */
+.hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fefefe;
+    padding: .5rem 0;
+}
+
+/* Form styles */
+form {
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Input group styles */
+.input-group {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+/* Above content styles */
+.above_content {
+    position: relative;
+}
+
+/* Input styles */
+input {
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+/* Label styles */
+label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-85%);
+    padding: 10px;
+    color: #fefefe;
+    cursor: text;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+/* Input and select styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+button {
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Optional fields styles */
+.optional-fields {
+    display: none;
+}
+
+/* Margin styles */
+.margin {
+    margin-top: 2.5rem;
+}

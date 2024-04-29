@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Mounting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/369860f82a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="hero">
+        <!-- TV Mounting Request Form -->
+        <form id="mountingForm" action="#" method="post">
+            <!-- Your Name -->
+            <div class="input-group margin">
+                <label for="yourName"><i class="fa-solid fa-user"></i> Your Name *</label>
+                <input type="text" id="yourName" name="yourName" required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email"><i class="fa-solid fa-envelope"></i> Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Mobile No. -->
+            <div class="input-group">
+                <label for="mobileNo"><i class="fa-solid fa-phone-square-alt"></i> Mobile No. *</label>
+                <input type="tel" id="mobileNo" name="mobileNo" required>
+            </div>
+
+            <!-- TV Size -->
+            <div class="input-group">
+                <label for="tvSize"><i class="fa-solid fa-tv"></i> TV Size *</label>
+                <input type="text" id="tvSize" name="tvSize" required>
+            </div>
+
+            <!-- Preferred Date for Mounting -->
+            <div class="above_content">
+                <label for="preferredDate"><i class="fa-solid fa-calendar-days"></i> Preferred Date for Mounting *</label>
+                <input type="date" id="preferredDate" name="preferredDate" required>
+            </div>
+
+            <!-- Wall Inclination (Optional) -->
+            <div class="input-group margin">
+                <div class="optional-fields">
+                    <label for="wallInclination">Wall Inclination</label>
+                    <input type="text" id="wallInclination" name="wallInclination">
+                </div>
+            </div>
+
+            <!-- TV Placement Location -->
+            <div class="input-group">
+                <label for="placementLocation">TV Placement Location *</label>
+                <select id="placementLocation" name="placementLocation" required>
+                    <option value="" selected disabled>Select TV Placement Location</option>
+                    <option value="aboveFireplace">Above Fireplace</option>
+                    <option value="livingRoom">Living Room</option>
+                    <option value="bedroom">Bedroom</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Picture of TV Placement Location (Optional) -->
+            <div class="input-group">
+                <div class="optional-fields">
+                    <label for="pictureLocation"><i class="fa-solid fa-image"></i> Picture of TV Placement Location</label>
+                    <input type="file" id="pictureLocation" name="pictureLocation">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">SUBMIT <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <!-- JavaScript for Optional Field Handling -->
+    <script>
+        const placementLocation = document.getElementById('placementLocation');
+        const optionalFields = document.querySelectorAll('.optional-fields');
+
+        placementLocation.addEventListener('change', function () {
+            const selectedOption = this.value;
+            if (selectedOption === 'other') {
+                optionalFields.forEach(field => field.style.display = 'block');
+            } else {
+                optionalFields.forEach(field => field.style.display = 'none');
+            }
+        });
+    </script>
+</body>
+</html>
